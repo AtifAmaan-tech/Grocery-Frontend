@@ -36,7 +36,7 @@ const Category = () => {
 
   const renderCard = catList.map((card) => {
     return (
-      <div className = "flex-1 mt-18 basis-[300px]" key={card.id}>
+      <div className = "flex-1 md:mt-8 mt-1 basis-[300px]" key={card.id}>
         {/* Image */}
         <div className='w-full min-h-[30vh] relative'>
           <img src={card.image} className='absolute bottom-0'></img>
