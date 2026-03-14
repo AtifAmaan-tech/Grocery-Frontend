@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
 import { FaBagShopping } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
@@ -7,14 +7,23 @@ import { CgMenuMotion } from "react-icons/cg";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const[isScrolled , setIsScrolled] = useState(false);
+  // const toggleMenu = () => {
+  //   setShowMenu(!showMenu);
+  // }
 
-  const toggleMenu = () => {
+  useEffect( () => {
 
-  }
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 5);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []);
   
-
   return (
-    <header className="bg-white fixed top-0 left-0 right-0 py-4 md:py-0 z-50">
+    <header className={`bg-white fixed top-0 left-0 right-0 py-4 md:py-0 z-50 ${isScrolled ? 'shadow-lg' : ''}`}>
       <nav className="max-w-[1400px] mx-auto md:h-[14vh] [12vh] px-10 flex justify-between items-center">
         {/* Main logo */}
         <a href="#" className="text-3xl semi-bold">

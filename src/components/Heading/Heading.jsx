@@ -1,5 +1,3 @@
-import React from "react";
-
 const Heading = (props) => {
   return (
     <div className='w-fit pt-20 mx-auto'>
