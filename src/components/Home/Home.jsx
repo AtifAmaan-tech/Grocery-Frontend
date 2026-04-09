@@ -1,9 +1,9 @@
-import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Hero from "../Hero/Hero";
 import Category from "../category/category";
 import Values from "../Values/Values";
 import Products from "../Products/Products";
+import Discount from "../Discount/Discount"
 
 const Home = () => {
   return (
@@ -13,6 +13,7 @@ const Home = () => {
       <Category />
       <Values />
       <Products />
+      <Discount />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Button from "../Button/Button.jsx";
 
 const card = ({ name, price, image, id, category }) => {
   return (
-    <div className="rounded-2lg bg-zinc-100 p-3 md:p-5">
+    <div className="rounded-lg bg-zinc-100 p-3 md:p-5">
       {/* Card Icons */}
       <div className="flex justify-between">
         <span className="text-2xl text-zinc-300 hover:text-red-500 transition-colors cursor-pointer">

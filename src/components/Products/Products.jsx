@@ -6,33 +6,37 @@ import Card from "../card/card.jsx";
 const Products = () => {
   const category = ["All", "Fruits", "Vegitables", "Dairy", "SeaFood"];
   const [selectedTab, setSelectedTab] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(8);
 
-  const renderCards = productList.filter(product => {
-    if (selectedTab === "All") return true;
-    return product.category === selectedTab;
-  }).map((product) => {
-    return (
-      <Card
-        key = {product.id}
-        name={product.name}
-        price={product.price}
-        image = {product.image}
-        category = {product.category}
-      />
-    );
-  });
+  const renderCards = productList
+    .filter((product) => {
+      if (selectedTab === "All") return true;
+      return product.category === selectedTab;
+    })
+    .slice(0, visibleCount)
+    .map((product) => {
+      return (
+        <Card
+          key={product.id}
+          name={product.name}
+          price={product.price}
+          image={product.image}
+          category={product.category}
+        />
+      );
+    });
 
   return (
-    <section className="max-w-[1400px] mx-auto px-2 md:px-5">
+    <section className="max-w-[1400px] mx-auto md:px-5">
       <Heading content="Products" highlight="Our" />
 
       {/* Tabs */}
-      <div className="flex flex-wrap gap-1 md:gap-2 justify-center mt-4 mb-4 h-auto">
+      <div className="flex flex-wrap gap-1 md:gap-2 justify-center mt-4 mb-4 h-auto ">
         {category.map((category) => {
           return (
             <button
               key={category}
-              className={`cursor-pointer font-semibold rounded-md px-5 py-1 hover:bg-zinc-300 ${selectedTab === category ? "bg-gradient-to-b from-green-400 to-green-500 text-white" : "bg-zinc-200"}`}
+              className={`cursor-pointer font-semibold rounded-md px-2 md:px-5 py-1 hover:bg-zinc-300 ${selectedTab === category ? "bg-gradient-to-b from-green-400 to-green-500 text-white" : "bg-zinc-200"}`}
               onClick={() => setSelectedTab(category)}
             >
               <span className="py-">{category}</span>
@@ -42,7 +46,14 @@ const Products = () => {
       </div>
 
       {/* Products listing */}
-      <div className = "grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10 px-6 md:px-20 mt-15 gap-y-5">{renderCards}</div>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-2 md:px-0 md:ml-1 md:-mr-0  md:gap-10 mt-15 gap-y-5">
+        {renderCards}
+      </div>
+      {visibleCount < productList.length && (<div className="flex justify-center mt-15">
+        <button className="rounded-md text-white bg-gradient-to-b from-green-400 to-green-600 text-lg p-2 font-bold" onClick={ () => setVisibleCount(prev => prev + 8)}>
+          Show More
+        </button>
+        </div>)}
     </section>
   );
 };

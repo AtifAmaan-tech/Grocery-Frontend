@@ -24,7 +24,7 @@ const Navbar = () => {
   
   return (
     <header className={`bg-white fixed top-0 left-0 right-0 py-4 md:py-0 z-50 ${isScrolled ? 'shadow-lg' : ''}`}>
-      <nav className="max-w-[1400px] mx-auto md:h-[14vh] [12vh] px-10 flex justify-between items-center">
+      <nav className="max-w-[1400px] mx-auto md:h-[14vh] px-5 md:px-10 flex justify-between items-center">
         {/* Main logo */}
         <a href="#" className="text-3xl semi-bold">
           Fresh<span className="font-semibold text-green-500 uppercase">c</span>
@@ -97,7 +97,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <ul className={`flex flex-col items-center text-center md:hidden gap-y-12 bg-green-500/20 backdrop-blur-xl absolute top-19 transition-all duration-300 ${showMenu ? '-right-1/3': '-right-full pl-5'} p-10 transform -translate-x-1/2 rounded-lg`}>
+        <ul className={`flex flex-col py-5 items-center text-center md:hidden gap-y-12 bg-green-500/20 backdrop-blur-xl absolute top-19 transition-all duration-300 ${showMenu ? '-right-1/3': '-right-full -mr-6'} transform -translate-x-1/2 rounded-lg`}>
           <li>
             <a
               href="#"
@@ -131,14 +131,14 @@ const Navbar = () => {
             </a>
           </li>
 
-          <li className="flex p-1 border-2 border-green-500 rounded-full md:hidden">
+          <li className="flex mx-3 border-2 border-green-500 rounded-full md:hidden">
             <input
               type="text"
               id="text"
               name="text"
               placeholder="search items"
               autoComplete="off"
-              className="flex-1 h-[4vh] px-3 focus:outline-none"
+              className="flex-1 h-[4vh]  focus:outline-none"
             ></input>
             <button className="bg-green-500 text-white w-8 h-8 flex justify-center items-center rounded-full bg-gradient-to-b from-green-400 to-green-500">
               <FaSearch />
