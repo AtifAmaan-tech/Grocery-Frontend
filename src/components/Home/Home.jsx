@@ -1,9 +1,10 @@
 import Navbar from "../Navbar/Navbar";
 import Hero from "../Hero/Hero";
-import Category from "../category/category";
+import Category from "../Category/Category";
 import Values from "../Values/Values";
 import Products from "../Products/Products";
 import Discount from "../Discount/Discount"
+import Process from "../Process/Process"
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Values />
       <Products />
       <Discount />
+      <Process />
     </div>
   );
 };

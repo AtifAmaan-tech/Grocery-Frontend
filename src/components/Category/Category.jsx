@@ -5,6 +5,7 @@ import vegCat from "../../assets/fruits-and-veggies.png";
 import dairyCat from "../../assets/dairy-and-eggs.png";
 
 const Category = () => {
+  
   const catList = [
     {
       id: 1,
