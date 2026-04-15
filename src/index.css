@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@layer base {
+}
+
 /* *{
     outline:0.05rem solid red
 } */

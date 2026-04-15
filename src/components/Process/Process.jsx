@@ -10,7 +10,7 @@ const Process = () => {
   const renderSteps = step.map((item) => {
     const Icon = item.icon;
     return (
-      <div key={item.id} className="relative flex flex-col items-left justify-center pl-6 gap-5 border border-1 border-zinc-200 w-[300px] rounded-3xl md:min-h-[400px] min-h-[300px]">
+      <div key={item.id} className="relative flex flex-col items-left justify-center pl-6 gap-5 border border-1 border-zinc-200 w-[300px] rounded-3xl md:min-h-[400px] min-h-[300px] bg-green-100/20">
         <span className="text-md font-bold text-green-600 -mt-10 mb-5">
           {item.number}
         </span>
