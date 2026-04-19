@@ -2,7 +2,15 @@ import Heading from "../Heading/Heading";
 import pic1 from "../../assets/testimonial/profile-1.png";
 import pic2 from "../../assets/testimonial/profile-2.png";
 import pic3 from "../../assets/testimonial/profile-3.png";
+import pic4 from "../../assets/testimonial/profile-4.jpg";
+import pic5 from "../../assets/testimonial/profile-5.jpg";
 import { RiDoubleQuotesL } from "react-icons/ri";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Navigation } from "swiper/modules";
+import "swiper/css/navigation";
+import { FaChevronCircleLeft } from "react-icons/fa";
+import { FaChevronCircleRight } from "react-icons/fa";
 
 const feedbacks = [
   {
@@ -26,37 +34,100 @@ const feedbacks = [
     rating: 5,
     profile_image: pic3,
   },
+  {
+    id: 4,
+    name: "David Wilson",
+    para: "The quality of the organic poultry and meat is second to none. I appreciate the transparency about their sourcing and the freshness is always guaranteed. It's transformed my home cooking entirely.",
+    rating: 5,
+    profile_image: pic4,
+  },
+  {
+    id: 5,
+    name: "Sophia Martinez",
+    para: "Fast, reliable, and the best artisan bread selection in the area. I love the eco-friendly packaging they use—it shows they really care about the environment as much as they do about food quality.",
+    rating: 4,
+    profile_image: pic5,
+  },
 ];
 
 const Testimonial = () => {
-
+  // Testimonial cards
   const renderFeedbacks = feedbacks.map((fb) => {
-
     return (
-      <div
-        key={fb.id}
-        className="flex flex-col border border-zinc-300 gap-5 rounded-2xl h-[370px] w-[320px] md:w-[390px] px-5 bg-green-100/20"
-      >
-        <div className="mt-4 text-4xl md:text-6xl text-green-700">
-          <RiDoubleQuotesL  />
-        </div>
-        <div className="text-md m:text-xl text-zinc-600 ">{fb.para}</div>
-        <div className="flex flex-row mt-auto mb-6 pt-2 border-t-1 border-zinc-300">
-          <img src={fb.profile_image} alt={fb.name} className="h-[50px] w-[50px] md:h-[60px] md:w-[60px] rounded-full" />
+      <SwiperSlide key={fb.id}>
+        <div className="flex flex-col border border-zinc-300 gap-5 rounded-2xl h-[350px] w-full md:w-[390px] px-5 bg-green-100/20">
+          <div className="mt-4 text-4xl md:text-6xl text-green-700">
+            <RiDoubleQuotesL />
+          </div>
+          <div className="text-md m:text-xl text-zinc-600 ">{fb.para}</div>
+          <div className="flex flex-row mt-auto mb-6 pt-2 border-t-1 border-zinc-300">
+            <img
+              src={fb.profile_image}
+              alt={fb.name}
+              className="h-[50px] w-[50px] md:h-[54px] md:w-[54px] rounded-full border border-yellow-400 border-2 p-1"
+            />
 
-          <div className="px-5">
-            <div className="text-xl md:text-2xl font-semibold">{fb.name}</div>
-            <div className="text-green">{"⭐".repeat(fb.rating)}</div>
+            <div className="px-5">
+              <div className="text-xl md:text-2xl font-semibold">{fb.name}</div>
+              <div className="text-green">{"⭐".repeat(fb.rating)}</div>
+            </div>
           </div>
         </div>
-      </div>
+      </SwiperSlide>
     );
   });
+
   return (
     <section>
       <Heading highlight="Customer's" content="Feedback" />
-      <div className="flex flex-col  md:flex-row justify-between items-center md:gap-5 gap-10 px-20 py-10">
-        {renderFeedbacks}
+
+      <div className="flex flex-col md:flex-row justify-between items-center md:gap-5 gap-10 px-5 md:px-20 py-10">
+        {/* Desktop Left Button */}
+        <div className="hidden md:block">
+          <button className="custom-prev">
+            <FaChevronCircleLeft className="hover:text-green-500 hover:bg-none hover:bg-white text-white  text-xl md:text-3xl bg-gradient-to-b from-green-400 to-green-600 bg-zinc-500 rounded-full transition-transform durationo-300 hover:scale-[1.1]" />
+          </button>
+        </div>
+
+        {/* Swiping cards */}
+        <Swiper
+          navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
+          loop={true}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1024: { slidesPerView: 3, spaceBetween: 40 },
+          }}
+          modules={[Navigation]}
+          className="h-[350px] mt-auto flex-1 w-full"
+        >
+          {renderFeedbacks}
+        </Swiper>
+
+        {/* Desktop Right Button */}
+        <div className="hidden md:block">
+          <button className="custom-next">
+            <FaChevronCircleRight className="hover:text-green-500 hover:bg-none hover:bg-white text-white  text-xl md:text-3xl bg-gradient-to-b from-green-400 to-green-600 bg-zinc-500 rounded-full transition-transform durationo-300 hover:scale-[1.1]" />
+          </button>
+        </div>
+
+        {/* Mobile left and right button */}
+        <div className="flex md:hidden gap-8 mt-2">
+          <button className="custom-prev">
+            <FaChevronCircleLeft className="hover:text-green-500 hover:bg-none hover:bg-white text-white  text-xl md:text-3xl bg-gradient-to-b from-green-400 to-green-600 bg-zinc-500 rounded-full transition-transform durationo-300 hover:scale-[1.1]" />
+          </button>
+
+          <button className="custom-next">
+            <FaChevronCircleRight className="hover:text-green-500 hover:bg-none hover:bg-white text-white  text-xl md:text-3xl bg-gradient-to-b from-green-400 to-green-600 bg-zinc-500 rounded-full transition-transform durationo-300 hover:scale-[1.1]" />
+          </button>
+        </div>
+        
       </div>
     </section>
   );

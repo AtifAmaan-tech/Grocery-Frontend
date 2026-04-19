@@ -26,8 +26,8 @@ const Navbar = () => {
     <header className={`bg-white fixed top-0 left-0 right-0 py-4 md:py-0 z-50 ${isScrolled ? 'shadow-lg' : ''}`}>
       <nav className="max-w-[1400px] mx-auto md:h-[14vh] px-5 md:px-10 flex justify-between items-center">
         {/* Main logo */}
-        <a href="#" className="text-3xl semi-bold">
-          Fresh<span className="font-semibold text-green-500 uppercase">c</span>
+        <a href="#" className="text-3xl font-semibold">
+          ℱresh<span className="font-bold text-green-500 uppercase">𝓒</span>
           art
         </a>
 

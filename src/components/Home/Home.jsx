@@ -6,6 +6,7 @@ import Products from "../Products/Products";
 import Discount from "../Discount/Discount"
 import Process from "../Process/Process"
 import Testimonial from "../Testimonial/Testimonial"
+import Footer from "../Footer/Footer"
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Discount />
       <Process />
       <Testimonial />
+      <Footer />
     </div>
   );
 };
