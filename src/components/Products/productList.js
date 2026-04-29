@@ -1,25 +1,25 @@
-import broccoli from "../../assets/broccoli.png";
-import cabbage from "../../assets/cabbage.png";
-import capsicum from "../../assets/capsicum.png";
-import eggplant from "../../assets/eggplant.png";
-import lettuce from "../../assets/lettuce.png";
-import kale from "../../assets/kale.png";
+import broccoli from "../../assets/broccoli.webp";
+import cabbage from "../../assets/cabbage.webp";
+import capsicum from "../../assets/capsicum.webp";
+import eggplant from "../../assets/eggplant.webp";
+import lettuce from "../../assets/lettuce.webp";
+import kale from "../../assets/kale.webp";
 
-import banana from "../../assets/banana.png";
-import grapes from "../../assets/grapes.png";
-import kiwi from "../../assets/kiwi.png";
-import pineapple from "../../assets/pineapple.png";
-import strawberry from "../../assets/strawberry.png";
+import banana from "../../assets/banana.webp";
+import grapes from "../../assets/grapes.webp";
+import kiwi from "../../assets/kiwi.webp";
+import pineapple from "../../assets/pineapple.webp";
+import strawberry from "../../assets/strawberry.webp";
 
-import milk from "../../assets/milk.png";
-import cheese from "../../assets/cheese.png";
-import butter from "../../assets/butter.png";
-import eggs from "../../assets/eggs.png";
-import yogurt from "../../assets/yogurt.png";
+import milk from "../../assets/milk.webp";
+import cheese from "../../assets/cheese.webp";
+import butter from "../../assets/butter.webp";
+import eggs from "../../assets/eggs.webp";
+import yogurt from "../../assets/yogurt.webp";
 
-import salmon from "../../assets/salmon.png";
-import shrimp from "../../assets/shrimp.png";
-import tilapia from "../../assets/tilapia.png";
+import salmon from "../../assets/salmon.webp";
+import shrimp from "../../assets/shrimp.webp";
+import tilapia from "../../assets/tilapia.webp";
 
 const productList = [
   // Vegitables

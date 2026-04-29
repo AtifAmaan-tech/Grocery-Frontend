@@ -1,4 +1,4 @@
-import fruitBg from "../../assets/fresh-fruits.png";
+import fruitBg from "../../assets/fresh-fruits.webp";
 import Button from "../Button/Button"
 
 const Discount = () => {

@@ -1,7 +1,7 @@
 import { FaHeart, FaShieldAlt, FaLeaf } from "react-icons/fa";
 import { SiCodefresh } from "react-icons/si";
 import Heading from "../Heading/Heading";
-import basket from "../../assets/basket-full-vegetables.png";
+import basket from "../../assets/basket-full-vegetables.webp";
 
 const Values = () => {
   //Left Values

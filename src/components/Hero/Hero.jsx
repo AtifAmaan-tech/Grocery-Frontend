@@ -1,4 +1,4 @@
-import Grocery from "../../assets/grocery.png";
+import Grocery from "../../assets/grocery.webp";
 import Button from "../Button/Button";
 const Hero = () => {
   return (

@@ -1,9 +1,9 @@
 import Heading from "../Heading/Heading";
-import pic1 from "../../assets/testimonial/profile-1.png";
-import pic2 from "../../assets/testimonial/profile-2.png";
-import pic3 from "../../assets/testimonial/profile-3.png";
-import pic4 from "../../assets/testimonial/profile-4.jpg";
-import pic5 from "../../assets/testimonial/profile-5.jpg";
+import pic1 from "../../assets/testimonial/profile-1.webp";
+import pic2 from "../../assets/testimonial/profile-2.webp";
+import pic3 from "../../assets/testimonial/profile-3.webp";
+import pic4 from "../../assets/testimonial/profile-4.webp";
+import pic5 from "../../assets/testimonial/profile-5.webp";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

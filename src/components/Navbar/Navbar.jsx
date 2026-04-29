@@ -51,7 +51,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="#process"
               className="font-semibold tracking-wider text-zinc-800 hover:text-green-500"
             >
               Process

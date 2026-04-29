@@ -33,7 +33,7 @@ const Process = () => {
   });
 
   return (
-    <section className="max-w-[1400px] mx-auto py-10">
+    <section id="process" className="max-w-[1400px] mx-auto py-10">
       <Heading highlight="Our" content="Process" />
       <div className="flex md:flex-row flex-col gap-10 justify-between px-8 mt-10">{renderSteps}</div>
     </section>
