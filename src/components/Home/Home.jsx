@@ -3,15 +3,14 @@ import Hero from "../Hero/Hero";
 import Category from "../Category/Category";
 import Values from "../Values/Values";
 import Products from "../Products/Products";
-import Discount from "../Discount/Discount"
-import Process from "../Process/Process"
-import Testimonial from "../Testimonial/Testimonial"
-import Footer from "../Footer/Footer"
+import Discount from "../Discount/Discount";
+import Process from "../Process/Process";
+import Testimonial from "../Testimonial/Testimonial";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <Hero />
       <Category />
       <Values />
@@ -19,7 +18,6 @@ const Home = () => {
       <Discount />
       <Process />
       <Testimonial />
-      <Footer />
     </div>
   );
 };
